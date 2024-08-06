@@ -3,9 +3,9 @@ import React from 'react';
 import {blogs} from '@/constants'
 function blogdetails() {
   return (
-    <div className='flex gap-10 p-10'>
+    <div className='flex flex-wrap gap-20 p-10 justify-between'>
       {blogs.map((items,index)=>(
-        <Link key ={items.id} href = {`/blog/${items.id}`}>
+        <Link className="hover:bg-color1 hover:text-white border-2 border-gray rounded-lg p-10 pr-12 pl-12"key ={items.id} href = {`/Services/${items.id}`}>
           {items.title}
         </Link>      
       ))}

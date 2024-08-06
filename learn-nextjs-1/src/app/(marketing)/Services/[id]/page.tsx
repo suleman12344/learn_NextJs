@@ -22,11 +22,9 @@ function blogdetails({params} : BlogDetailPageProps) {
   const blogdetails = detailsFec(Number(params.id))
   console.log(blogdetails)
   return (
-    <div>
-      <h1>{blogdetails?.title}</h1>
-      <p>Author :{blogdetails?.author}</p>
+    <div className='p-20'>
+      <h1 className='font-bold text-2xl mb-2'>{blogdetails?.title}</h1>
       <p>{blogdetails?.content}</p>
-      <p>{blogdetails?.date}</p>
     </div>
     
   )

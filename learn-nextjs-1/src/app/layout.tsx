@@ -16,20 +16,29 @@ export default function RootLayout({children,}:Readonly<{children:React.ReactNod
   return(
     <html lang="en">
       <body className={inter.className}>
-      <header className="bg-gray-400 p-5 flex gap-10">
+      <header className="flex bg-color1 p-10 justify-between sticky top-0 flex-wrap">
+      <Link href='/' className="font-extrabold text-xl text-white">Muhammad Suleman</Link>
+        <nav className="flex gap-10 font-bold text-white">
         <Link href='/'> Home</Link>
-        <Link href='/dashBoard'> dashboard</Link>
-        <Link href='/aboutUs'> About Us</Link>
-        <Link href='/blog'> blog</Link>
-        <Link href='/settings'> settings</Link>
-        <Link href='/settings/settings1'> settings1</Link>
-        <Link href='/settings/settings2'> settings2</Link>
+        <Link href='/Services'>Services</Link>
+        <Link href='/aboutUs'>About</Link>
+        <Link href='/work'>Work</Link>
+        </nav>
       </header>
         {children}
-      <div className="bg-gray-400 p-20 mt-20">
-        This is footer
-        <Link href = '/blog/blog1'>Blog1</Link>
+      <div className="bg-green-600 flex flex-wrap justify-between">
+      <div className="p-20 font-bold text-white">
+        <Link href='/'> Home</Link><br></br> 
+        <Link href='/Services'>Services</Link><br></br>
+        <Link href='/aboutUs'>About</Link><br></br>
+        <Link href='/settings'>Work</Link><br></br>
       </div>
+      <div className="p-20">
+        <form action="submit" className="font-bold text-white">Email</form>
+        <input className="pt-2 pb-2 pr-20 pl-5 bg-gray-300" type="Enter Email" placeholder="Email"/>
+      </div>
+      </div>
+     
       </body>
     </html>
   )
